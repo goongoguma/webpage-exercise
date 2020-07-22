@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import "slick-carousel/slick/slick.css"; 
+import React, { useState, useEffect } from 'react';
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Header } from './components/Header';
 import { Hamburger } from './components/Hamburger';
@@ -7,6 +7,7 @@ import { First } from './components/First';
 import { Second } from './components/Second';
 import { Third } from './components/Third';
 import { Fourth } from './components/Fourth';
+import { Fifth } from './components/Fifth';
 
 const useWindowSize = () => {
   const isClient = typeof window === 'object';
@@ -42,12 +43,12 @@ function App() {
 
   return (
     <div className='wrapper'>
-      { size.width < 850 ? <Hamburger /> : <Header />}
+      {size.width < 850 ? <Hamburger /> : <Header />}
       <First />
       <Second />
       <Third />
       <Fourth />
-      {/* <Slider /> */}
+      <Fifth />
     </div>
   );
 }
