@@ -1,24 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import { Header } from './components/Header';
+import { Hamburger } from './components/Hamburger';
+import { First } from './components/First';
+import { Second } from './components/Second';
+import { Third } from './components/Third';
+import { Fourth } from './components/Fourth';
+
+const useWindowSize = () => {
+  const isClient = typeof window === 'object';
+
+  const getSize = () => {
+    return {
+      width: isClient ? window.innerWidth : undefined,
+      height: isClient ? window.innerHeight : undefined
+    };
+  }
+
+  const [windowSize, setWindowSize] = useState(getSize);
+
+  useEffect(() => {
+    if (!isClient) {
+      return false;
+    }
+
+    const handleResize = () => {
+      setWindowSize(getSize())
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, []);
+
+  return windowSize;
+}
 
 function App() {
+  const size = useWindowSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      { size.width < 850 ? <Hamburger /> : <Header />}
+      <First />
+      <Second />
+      <Third />
+      <Fourth />
+      {/* <Slider /> */}
     </div>
   );
 }
