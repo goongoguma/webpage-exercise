@@ -8,6 +8,7 @@ import { Second } from './components/Second';
 import { Third } from './components/Third';
 import { Fourth } from './components/Fourth';
 import { Fifth } from './components/Fifth';
+import { Footer } from './components/Footer';
 
 const useWindowSize = () => {
   const isClient = typeof window === 'object';
@@ -49,6 +50,7 @@ function App() {
       <Third />
       <Fourth />
       <Fifth />
+      <Footer />
     </div>
   );
 }

@@ -41,51 +41,53 @@
 }
 
 @media (max-width: 850px) {
-  .fourth-section {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-
-    .fourth-section-image-wrapper {
-      padding: 0;
-      width: 100%;
-
-      .fourth-section-image {
-        background-image: url('../../img/fourth-image.jpg');
-        background-repeat:no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        width: 100%;
-        height: 400px;
-      }
-    }
-
-    .fourth-section-image-wrapper-2 {
-      padding: 0;
-      width: 100%;
-
-      .fourth-section-image-2 {
-        background-image: url('../../img/fourth-image-2.jpg');
-        background-repeat:no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        width: 100%;
-        height: 400px;
-      }
-    }
-
-    .fourth-section-text-wrapper {
+  .fourth-wrapper {
+    margin-bottom: 50px;
+    .fourth-section {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       padding: 0;
-      width: 100%;
-
-      .fourth-section-desc {
-        line-height: 30px;
+  
+      .fourth-section-image-wrapper {
+        padding: 0;
+        width: 100%;
+  
+        .fourth-section-image {
+          background-image: url('../../img/fourth-image.jpg');
+          background-repeat:no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          width: 100%;
+          height: 400px;
+        }
       }
-    }
+  
+      .fourth-section-image-wrapper-2 {
+        padding: 0;
+        width: 100%;
+  
+        .fourth-section-image-2 {
+          background-image: url('../../img/fourth-image-2.jpg');
+          background-repeat:no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          width: 100%;
+          height: 400px;
+        }
+      }
+  
+      .fourth-section-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+  
+        .fourth-section-desc {
+          line-height: 30px;
+        }
+    } }
   }
 }
